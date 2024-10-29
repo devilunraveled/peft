@@ -43,17 +43,17 @@ if __name__ == "__main__" :
     training_arguments = {
         'output_dir': Paths.model,
         'num_train_epochs': 4,
-        'per_device_train_batch_size': 2,
+        'per_device_train_batch_size': 1,
         'per_device_eval_batch_size': 1,
         'eval_strategy': 'epoch',
         'save_strategy': 'epoch',
         'logging_dir': Paths.logs,
         'logging_steps': 5,
-        'learning_rate': 1e-7,
+        'learning_rate': 5e-6,
         # 'bf16': True,
         'warmup_steps': 15,
         'weight_decay': 0.01,
-        'gradient_accumulation_steps': 4,
+        'gradient_accumulation_steps': 1,
         'save_safetensors' : False
     }
 

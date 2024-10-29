@@ -12,7 +12,7 @@ class CustomDataset(Dataset):
     
     def _inference_input_(self, index):
         row = self.dataframe.iloc[index]
-        input = row['article'] + ' ' + ". Summary :->\n" 
+        input = row['article'] + ' ' + ". Summary ->\n" 
         return input
 
     def __getitem__(self, index):
@@ -24,5 +24,5 @@ class CustomDataset(Dataset):
         tokenizedInputs['input_ids'] = tokenizedInputs['input_ids'].squeeze(0)
         tokenizedInputs['attention_mask'] = tokenizedInputs['attention_mask'].squeeze(0)
         tokenizedInputs['labels'] = tokenizedInputs['input_ids'].clone()
-
+        
         return tokenizedInputs

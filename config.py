@@ -1,11 +1,11 @@
 class ModelConfig :
-    name = 'EleutherAI/gpt-neo-1.3b'
+    name = 'openai-community/gpt2'
     
 class DataConfig :
-    max_length = 512
+    max_length = 768
 
 class FineTunedModelConfig :
-    checkpoint = './ckpt/checkpoint-10500/'
+    checkpoint = './ckpt_lora/checkpoint-2624'
 
 class Paths : 
     data = "./data/cnn_dailymail/"
